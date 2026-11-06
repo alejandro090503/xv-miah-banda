@@ -79,7 +79,7 @@ function FlipUnit({ value, label }: { value: string; label: string }) {
           lineHeight: 1,
           letterSpacing: "-1px",
           fontVariantNumeric: "tabular-nums",
-          background: "linear-gradient(160deg,#8C4F59 0%,#ecd484 45%,#8C4F59 100%)",
+          background: "linear-gradient(160deg,#6E3540 0%,#8C4F59 50%,#6E3540 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",

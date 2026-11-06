@@ -90,9 +90,9 @@ export default function Itinerario() {
       <style>{`
         .itin-wrap{position:relative;max-width:520px;margin:0 auto;padding:20px clamp(16px,4vw,40px)}
         .itin-track{position:absolute;left:50%;top:0;bottom:0;width:0;overflow:visible;z-index:1;pointer-events:none}
-        .itin-track-glow{position:absolute;left:-28px;width:56px;top:0;height:100%;transform:scaleY(0);transform-origin:top center;background:linear-gradient(to bottom,transparent 0%,rgba(183,110,121,.15) 8%,rgba(183,110,121,.26) 40%,rgba(183,110,121,.26) 60%,rgba(183,110,121,.15) 92%,transparent 100%);filter:blur(22px);opacity:.92;will-change:transform;pointer-events:none}
-        .itin-track-mid{position:absolute;left:-5px;width:10px;top:0;height:100%;transform:scaleY(0);transform-origin:top center;background:linear-gradient(to bottom,transparent 0%,rgba(240,214,147,.5) 8%,rgba(240,214,147,.7) 40%,rgba(240,214,147,.7) 60%,rgba(240,214,147,.5) 92%,transparent 100%);filter:blur(5px);opacity:.92;will-change:transform;pointer-events:none}
-        .itin-track-fill{position:absolute;left:-.75px;width:1.5px;top:0;height:100%;transform:scaleY(0);transform-origin:top center;background:linear-gradient(to bottom,transparent 0%,#B76E79 5%,#D9A3AA 28%,#8C4F59 50%,#D9A3AA 72%,#B76E79 95%,transparent 100%);border-radius:1px;will-change:transform;pointer-events:none}
+        .itin-track-glow{position:absolute;left:-40px;width:80px;top:0;height:100%;transform:scaleY(0);transform-origin:top center;background:linear-gradient(to bottom,transparent 0%,rgba(183,110,121,.15) 8%,rgba(183,110,121,.4) 40%,rgba(183,110,121,.4) 60%,rgba(183,110,121,.15) 92%,transparent 100%);filter:blur(22px);opacity:.92;will-change:transform;pointer-events:none}
+        .itin-track-mid{position:absolute;left:-5px;width:10px;top:0;height:100%;transform:scaleY(0);transform-origin:top center;background:linear-gradient(to bottom,transparent 0%,rgba(217,163,170,.5) 8%,rgba(217,163,170,.85) 40%,rgba(217,163,170,.85) 60%,rgba(217,163,170,.5) 92%,transparent 100%);filter:blur(5px);opacity:.92;will-change:transform;pointer-events:none}
+        .itin-track-fill{position:absolute;left:-1.25px;width:2.5px;box-shadow:0 0 8px 1px rgba(217,163,170,.9);top:0;height:100%;transform:scaleY(0);transform-origin:top center;background:linear-gradient(to bottom,transparent 0%,#B76E79 5%,#D9A3AA 28%,#8C4F59 50%,#D9A3AA 72%,#B76E79 95%,transparent 100%);border-radius:1px;will-change:transform;pointer-events:none}
         .itin-track-shimmer{position:absolute;left:-10px;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 38% 36%,#fff 0%,#F1D5D8 38%,rgba(183,110,121,.15) 100%);box-shadow:0 0 10px 4px rgba(217,163,170,.9),0 0 22px 8px rgba(183,110,121,.55),0 0 42px 14px rgba(183,110,121,.18);opacity:0;pointer-events:none;will-change:top,opacity}
         .itin-events{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:clamp(42px,7.5vh,88px);position:relative;z-index:2}
         .itin-event{position:relative;display:flex;flex-direction:column;align-items:center}
@@ -101,14 +101,14 @@ export default function Itinerario() {
         .itin-event.is-active .itin-marker::before{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid rgba(217,163,170,.45);animation:itin-halo 2.4s ease-in-out infinite}
         .itin-event.is-active .itin-marker::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(183,110,121,.1)}
         @keyframes itin-halo{0%,100%{opacity:.28;transform:scale(1)}50%{opacity:.58;transform:scale(1.05)}}
-        .itin-card{padding:24px 30px 28px;background:linear-gradient(150deg,rgba(233,201,205,.18) 0%,rgba(255,249,248,.66) 70%);border:1px solid rgba(217,163,170,.22);border-radius:2px;text-align:center;width:100%;max-width:400px;position:relative;transition:border-color .5s ease,background .5s ease,box-shadow .5s ease}
+        .itin-card{padding:26px 30px 30px;background:linear-gradient(150deg,rgba(255,249,248,.92) 0%,rgba(244,225,227,.78) 100%);border:1px solid rgba(183,110,121,.5);border-radius:18px;box-shadow:0 0 0 1px rgba(255,255,255,.8) inset,0 0 16px rgba(217,163,170,.55),0 0 34px rgba(183,110,121,.22),0 16px 34px -18px rgba(110,53,64,.4);text-align:center;width:100%;max-width:400px;position:relative;transition:border-color .5s ease,background .5s ease,box-shadow .5s ease}
         .itin-card::before,.itin-card::after{content:"";position:absolute;left:50%;transform:translateX(-50%);height:1px;background:linear-gradient(to right,transparent,rgba(217,163,170,.6),transparent)}
         .itin-card::before{top:10px;width:52%}
         .itin-card::after{bottom:10px;width:52%}
         .itin-time{font-family:var(--font-cormorant),serif;font-style:italic;font-weight:700;font-size:clamp(21px,5.6vw,26px);color:#B76E79;letter-spacing:.02em;margin-bottom:6px;transition:color .5s ease}
         .itin-name{font-family:var(--font-lato),sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.28em;color:#8C4F59;font-weight:700;padding-left:.28em}
         .itin-desc{margin-top:12px;font-family:var(--font-cormorant),serif;font-style:italic;font-weight:600;font-size:16px;color:var(--text-soft);line-height:1.62}
-        .itin-event.is-active .itin-card{border-color:rgba(217,163,170,.5);background:linear-gradient(150deg,rgba(233,201,205,.28) 0%,rgba(255,249,248,.72) 70%);box-shadow:0 18px 52px -22px rgba(110,53,64,0.25)}
+        .itin-event.is-active .itin-card{border-color:rgba(183,110,121,.85);box-shadow:0 0 0 1px rgba(255,255,255,.9) inset,0 0 22px rgba(217,163,170,.8),0 0 46px rgba(183,110,121,.38),0 18px 40px -18px rgba(110,53,64,.45)}
         .itin-event.is-active .itin-time{color:#6E3540}
         @media(max-width:680px){.itin-card{max-width:100%;padding:20px 20px 24px}.itin-time{font-size:26px}}
         @media(prefers-reduced-motion:reduce){.itin-event.is-active .itin-marker::before{animation:none!important}}

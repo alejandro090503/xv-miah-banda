@@ -2,81 +2,20 @@
 import { PHOTOS } from "./photos";
 import { useT } from "./i18n";
 
-/* Foto 3 — cierre, bosque encantado, con frase y monograma */
+/* Cierre: foto con deriva y brillo (como el hero), halo tras el texto, sin iniciales */
 export default function ClosingPhoto() {
   const t = useT();
-  const hasPhoto = !!PHOTOS.closing;
-
   return (
-    <section style={{
-      position: "relative",
-      width: "100%",
-      minHeight: "78vh",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "flex-end",
-      overflow: "hidden",
-      background: hasPhoto ? "#FBF4F3" : "linear-gradient(180deg, #FFF9F8 0%, #FBF4F3 100%)",
-      padding: "80px 28px 64px",
-    }}>
-      {hasPhoto && (
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: `url("${PHOTOS.closing}")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          pointerEvents: "none",
-        }} />
-      )}
-      <div style={{
-        position: "absolute", inset: 0,
-        background: "linear-gradient(180deg, rgba(255,249,248,0.45) 0%, rgba(255,249,248,0.25) 40%, rgba(255,249,248,0.85) 100%)",
-        pointerEvents: "none",
-      }} />
-
-      <p style={{
-        position: "relative",
-        maxWidth: 360,
-        textAlign: "center",
-        fontFamily: "var(--font-great-vibes), cursive",
-        fontSize: "clamp(26px, 8vw, 36px)",
-        lineHeight: 1.5,
-        color: "#3D2A2D",
-        textShadow: "0 2px 12px rgba(0,0,0,0.6)",
-        marginBottom: 30,
-      }}>
-        {t.closeMsg}
-      </p>
-
-      <div style={{
-        position: "relative",
-        fontFamily: "var(--font-great-vibes), cursive",
-        fontSize: 72,
-        lineHeight: 1.25,
-        padding: "0 30px",
-        overflow: "visible",
-        background: "var(--foil)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-        backgroundClip: "text",
-        filter: "drop-shadow(0 3px 14px rgba(0,0,0,0.5))",
-      }}>
-        MB
+    <section style={{ position: "relative", width: "100%", minHeight: "78vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", overflow: "hidden", padding: "80px 28px 64px", background: "transparent" }}>
+      <div className="hero-bg" style={{ zIndex: -3 }} aria-hidden>
+        <i className="hero-drift" style={{ backgroundImage: `url("${PHOTOS.closing}")`, backgroundPosition: "center 30%" }} />
+        <div className="hero-glow"><span style={{ position: "absolute", inset: 0 }} /></div>
       </div>
-      <div style={{
-        position: "relative",
-        fontFamily: "var(--font-cormorant), serif",
-        fontStyle: "italic",
-        fontWeight: 600,
-        fontSize: 15,
-        letterSpacing: 6,
-        textTransform: "uppercase",
-        color: "#8C4F59",
-        marginTop: 6,
-        textShadow: "0 1px 8px rgba(0,0,0,0.5)",
-      }}>
-        Miah Alana
+      <div aria-hidden style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "62%", zIndex: -2, background: "linear-gradient(to top, rgba(255,249,248,.7) 0%, rgba(255,249,248,.35) 55%, transparent 100%)", pointerEvents: "none" }} />
+      <div style={{ position: "relative", maxWidth: 360, textAlign: "center" }}>
+        <div aria-hidden style={{ position: "absolute", inset: "-46px -34px", background: "radial-gradient(ellipse at center, rgba(255,249,248,.92) 0%, rgba(255,249,248,.7) 38%, rgba(255,249,248,.28) 62%, transparent 78%)", pointerEvents: "none" }} />
+        <p style={{ position: "relative", fontFamily: "var(--font-great-vibes), cursive", fontSize: "clamp(26px, 8vw, 36px)", lineHeight: 1.5, color: "#3D2A2D", textShadow: "none", marginBottom: 18 }}>{t.closeMsg}</p>
+        <div className="foil-text" style={{ position: "relative", display: "inline-block", fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 20, letterSpacing: 8, textIndent: 8, textTransform: "uppercase" }}>Miah Alana</div>
       </div>
     </section>
   );

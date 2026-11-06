@@ -65,3 +65,16 @@ body{font-family:'Lato','Inter',sans-serif;font-weight:500;font-size:17px;color:
 .drop-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:232px;min-height:48px;padding:13px 40px;border-radius:999px;border:1px solid var(--gold);background:#fff;box-shadow:0 8px 20px rgba(110,53,64,.15);cursor:pointer;overflow:hidden}
 .drop-label{font-family:var(--font-cormorant),serif;font-weight:700;font-size:19px;letter-spacing:5px;text-indent:5px;text-transform:uppercase;color:#6E3540}
 .drop-spec,.drop-glint,.drop-sweep{display:none}
+
+@keyframes inkA{0%{transform:translate(-3%,-2%) scale(1.05) rotate(0)}100%{transform:translate(3%,2%) scale(1.15) rotate(1deg)}}
+@keyframes inkB{0%{transform:translateY(-3%) rotate(-1.2deg) scale(1.04)}100%{transform:translateY(3%) rotate(1.2deg) scale(1.1)}}
+@keyframes inkC{0%{transform:scale(1);opacity:.72}100%{transform:scale(1.16);opacity:.95}}
+@keyframes inkD{0%{transform:translateX(-4%) scale(1.07)}100%{transform:translateX(4%) scale(1.12)}}
+@keyframes inkE{0%{transform:translate(2%,-3%) rotate(.8deg) scale(1.02)}100%{transform:translate(-2%,3%) rotate(-.8deg) scale(1.12)}}
+.ink-bg i{translate:0 var(--py,0px)}
+.ink-bg[data-k=hero] i{animation:inkA 32s ease-in-out infinite alternate}
+.ink-bg[data-k=top] i{animation:inkB 24s ease-in-out infinite alternate}
+.ink-bg[data-k=oval] i{animation:inkC 18s ease-in-out infinite alternate}
+.ink-bg[data-k=corner] i{animation:inkD 36s ease-in-out infinite alternate}
+.ink-bg[data-k=footer] i{animation:inkE 22s ease-in-out infinite alternate}
+.glow-edge{box-shadow:0 0 0 1px rgba(255,255,255,.8) inset,0 0 18px rgba(217,163,170,.6),0 0 40px rgba(183,110,121,.25),0 16px 36px -18px rgba(110,53,64,.4)!important;border-color:rgba(183,110,121,.6)!important}

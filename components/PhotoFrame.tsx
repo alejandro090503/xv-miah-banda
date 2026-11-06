@@ -20,7 +20,7 @@ export default function PhotoFrame({ variant = "framed", seed = 7 }: Props) {
       {/* Filtro SVG aplicado SOLO al papel — no toca la imagen */}
       
 
-      <div style={{
+      <div className={variant === "framed2" ? "lev" : "lev2"} style={{
         position: "relative",
         width: "min(300px, 80vw)",
         filter: "drop-shadow(0 14px 28px rgba(110,53,64,0.22))",

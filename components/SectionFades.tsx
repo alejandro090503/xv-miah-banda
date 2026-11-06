@@ -29,7 +29,20 @@ export default function SectionFades() {
         el.classList.add("sec-f");
       });
     };
-    run(); const t = setTimeout(run, 800); return () => clearTimeout(t);
+    run(); const t = setTimeout(run, 800);
+    const F: Record<string, number> = { hero: 0.06, top: -0.05, oval: 0.08, corner: -0.07, footer: 0.04 };
+    let raf = 0;
+    const par = () => {
+      raf = 0; const vh = innerHeight;
+      document.querySelectorAll<HTMLElement>(".ink-bg").forEach((w) => {
+        const r = w.getBoundingClientRect(); if (r.bottom < -100 || r.top > vh + 100) return;
+        const i = w.firstElementChild as HTMLElement | null;
+        i?.style.setProperty("--py", ((r.top + r.height / 2 - vh / 2) * (F[w.dataset.k || ""] || 0.05)).toFixed(1) + "px");
+      });
+    };
+    const onS = () => { if (!raf) raf = requestAnimationFrame(par); };
+    addEventListener("scroll", onS, { passive: true }); par();
+    return () => { clearTimeout(t); removeEventListener("scroll", onS); };
   }, []);
   return null;
 }

@@ -25,10 +25,10 @@ import LangGate from "./LangGate";
 import MensajeIntro from "./MensajeIntro";
 import { LangProvider, useT, type Lang } from "./i18n";
 
-function Sec({ id, ink, flip, children, bot, top }: { id?: string; ink?: string; flip?: boolean; children: React.ReactNode; bot?: string; top?: string }) {
+function Sec({ id, ink, flip, children, bot, top, fh }: { id?: string; ink?: string; flip?: boolean; children: React.ReactNode; bot?: string; top?: string; fh?: string }) {
   return (
-    <div id={id} className="sec" data-top={top} data-bot={bot} style={{ background: "#fff" }}>
-      {ink && <div className={`ink-bg${flip ? " flip" : ""}`} aria-hidden><i style={{ backgroundImage: `url(/ink/ink-${ink}.webp)` }} /></div>}
+    <div id={id} className="sec" data-top={top} data-bot={bot} data-fh={fh} style={{ background: "#fff" }}>
+      {ink && <div className={`ink-bg${flip ? " flip" : ""}`} data-k={ink} aria-hidden><i style={{ backgroundImage: `url(/ink/ink-${ink}.webp)` }} /></div>}
       {children}
     </div>
   );
@@ -98,7 +98,7 @@ export default function InvitacionClient() {
         <Sec><ScrollReveal><PhotoFrame /></ScrollReveal></Sec>
         <Sec ink="footer" flip><ScrollReveal><RSVPSection /></ScrollReveal></Sec>
         <Sec id="album" ink="oval" flip><ScrollReveal><AlbumQR /></ScrollReveal></Sec>
-        <Sec><ClosingPhoto /></Sec>
+        <Sec fh="260px"><ClosingPhoto /></Sec>
         <Sec><Footer /></Sec>
       </div>
 

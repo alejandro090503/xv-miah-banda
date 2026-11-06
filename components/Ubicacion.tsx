@@ -12,7 +12,7 @@ interface VenueProps {
 function VenueCard({ type, name, address, time }: VenueProps) {
   const t = useT();
   return (
-    <div style={{
+    <div className="lev glow-edge" style={{
       position: "relative",
       overflow: "hidden",
       background: "linear-gradient(165deg, rgba(233,201,205,0.20) 0%, rgba(255,249,248,0.72) 60%)",
