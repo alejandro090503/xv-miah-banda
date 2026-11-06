@@ -34,16 +34,23 @@ export default function Hero() {
       {/* velo solo en la franja baja */}
       <div aria-hidden style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "58%", zIndex: -2, background: "linear-gradient(to top, rgba(61,32,40,.88) 0%, rgba(61,32,40,.62) 45%, transparent 100%)", pointerEvents: "none" }} />
       <div ref={txt} style={{ position: "relative", width: "100%", textAlign: "center", padding: "0 20px 110px", color: "#fff" }}>
-        <div style={{ fontFamily: "var(--font-cormorant), serif", fontStyle: "italic", fontWeight: 600, fontSize: 20, letterSpacing: 8, textTransform: "uppercase", textIndent: 8, color: "#F1D5D8", textShadow: "0 2px 10px rgba(0,0,0,.5)" }}>
-          {t.xvAnios}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, color: "#F1D5D8" }}>
+          <span style={{ width: 54, height: 1, background: "linear-gradient(90deg,transparent,#F1D5D8)" }} />
+          <span style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 21, letterSpacing: 10, textIndent: 10, textTransform: "uppercase", textShadow: "0 2px 10px rgba(0,0,0,.5)" }}>{t.xvAnios}</span>
+          <span style={{ width: 54, height: 1, background: "linear-gradient(270deg,transparent,#F1D5D8)" }} />
         </div>
-        <div className="foil-text foil-dark" style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: "clamp(78px, 24vw, 104px)", lineHeight: 1, letterSpacing: 6, display: "inline-block" }}>
+        <div className="foil-text foil-dark" style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: "clamp(96px, 30vw, 128px)", lineHeight: 1, letterSpacing: 4, fontVariantNumeric: "lining-nums", display: "inline-block", filter: "drop-shadow(0 3px 14px rgba(0,0,0,.4))" }}>
           16
         </div>
-        <h1 className="foil-text foil-dark foil-d2" style={{ fontFamily: "var(--font-great-vibes), cursive", fontSize: "min(19vw, 92px)", fontWeight: 400, display: "block", whiteSpace: "nowrap", filter: "drop-shadow(0 3px 14px rgba(0,0,0,.45))" }}>
+        <div aria-hidden style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, margin: "2px 0 10px" }}>
+          <span style={{ width: 70, height: 1, background: "linear-gradient(90deg,transparent,#D9A3AA)" }} />
+          <span style={{ width: 7, height: 7, background: "#F1D5D8", transform: "rotate(45deg)" }} />
+          <span style={{ width: 70, height: 1, background: "linear-gradient(270deg,transparent,#D9A3AA)" }} />
+        </div>
+        <h1 className="foil-text foil-dark foil-d2" style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: "clamp(30px, 9.4vw, 40px)", letterSpacing: 7, textIndent: 7, textTransform: "uppercase", display: "inline-block", whiteSpace: "nowrap", filter: "drop-shadow(0 3px 12px rgba(0,0,0,.45))" }}>
           Miah Alana
         </h1>
-        <div style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 22, letterSpacing: 6, textTransform: "uppercase", textIndent: 6, marginTop: 6, color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>
+        <div style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 22, letterSpacing: 6, textTransform: "uppercase", textIndent: 6, marginTop: 14, color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>
           {t.fecha}
         </div>
         <div style={{ fontFamily: "var(--font-lato), sans-serif", fontWeight: 600, fontSize: 16, letterSpacing: 4, textTransform: "uppercase", marginTop: 8, color: "#F1D5D8", textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>
