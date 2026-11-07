@@ -22,7 +22,7 @@ export const TEXTS = {
       "Tú eres una de ellas.",
     ],
     xvAnios: "Sweet",
-    fecha: "31 · Enero · 2027",
+    fecha: "30 · Enero · 2027",
     // Carrusel
     carTitle: "Miah Alana",
     carHint: "Arrastra para girar",
@@ -120,7 +120,7 @@ export const TEXTS = {
     // Cierre
     closeMsg: "Este día ha vivido en mis sueños, y su verdadera magia será estar rodeada de quienes han caminado conmigo.",
     // Footer
-    footFecha: "31 · Enero · 2027",
+    footFecha: "30 · Enero · 2027",
     footCredito: "Con mucho cariño por",
   },
   en: {
@@ -137,7 +137,7 @@ export const TEXTS = {
       "You are one of them.",
     ],
     xvAnios: "Sweet",
-    fecha: "January · 31 · 2027",
+    fecha: "January · 30 · 2027",
     carTitle: "Miah Alana",
     carHint: "Drag to spin",
     famEyebrow: "With the blessing of",
@@ -222,7 +222,7 @@ export const TEXTS = {
     rsvpYaSi: "You already confirmed your attendance! You can update your reply.",
     rsvpYaNo: "We have you down as unable to attend. You can change your reply.",
     closeMsg: "This day has lived in my dreams, and its true magic will be having beside me those who walked this path with me.",
-    footFecha: "January · 31 · 2027",
+    footFecha: "January · 30 · 2027",
     footCredito: "Made with love by",
   },
 };

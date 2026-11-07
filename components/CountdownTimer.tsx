@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useT } from "./i18n";
 
-const TARGET = new Date("2027-01-31T18:00:00-08:00");
+const TARGET = new Date("2027-01-30T18:00:00-08:00");
 
 function getRemainingTime() {
   const now = new Date();

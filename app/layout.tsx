@@ -26,12 +26,12 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sweet-16-miah-banda.vercel.app"),
-  title: "Miah Alana · Sweet 16 · 31 de Enero 2027",
+  title: "Miah Alana · Sweet 16 · 30 de Enero 2027",
   description:
-    "Invitación digital al Sweet 16 de Miah Alana Banda · 31 de enero de 2027 · La Puente, CA.",
+    "Invitación digital al Sweet 16 de Miah Alana Banda · 30 de enero de 2027 · La Puente, CA.",
   openGraph: {
     title: "Miah Alana · Sweet 16",
-    description: "31 de enero de 2027 · La Puente, CA.",
+    description: "30 de enero de 2027 · La Puente, CA.",
     type: "website",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Miah Alana · Sweet 16" }],
   },
