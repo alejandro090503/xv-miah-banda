@@ -19,7 +19,7 @@ body{font-family:'Lato','Inter',sans-serif;font-weight:500;font-size:17px;color:
 @keyframes goldSweep{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
 @keyframes levitate{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-9px) rotate(.6deg)}}
 @keyframes inkDrift{0%{transform:translate(-2.5%,-1.5%) scale(1) rotate(-.6deg)}100%{transform:translate(2.5%,1.5%) scale(1.1) rotate(.6deg)}}
-@keyframes heroDrift{0%{transform:translate(-1%,0) scale(1.02)}100%{transform:translate(1%,-2%) scale(1.1)}}
+@keyframes heroDrift{0%{transform:translate(-2.2%,1%) scale(1.04)}100%{transform:translate(2.2%,-2.4%) scale(1.14)}}
 @keyframes heroGlow{0%{transform:translateX(-60%) rotate(18deg)}100%{transform:translateX(160%) rotate(18deg)}}
 @keyframes pulseBtn{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
 
@@ -43,7 +43,7 @@ body{font-family:'Lato','Inter',sans-serif;font-weight:500;font-size:17px;color:
 .sec-f::after{bottom:0;background:var(--gradB)}
 
 .hero-bg{position:absolute;inset:-12% 0;overflow:hidden;pointer-events:none}
-.hero-drift{position:absolute;inset:0;background-size:cover;background-position:center 20%;animation:heroDrift 26s ease-in-out infinite alternate}
+.hero-drift{position:absolute;inset:0;background-size:cover;background-position:center 20%;animation:heroDrift 18s ease-in-out infinite alternate}
 .hero-glow{position:absolute;inset:0;mix-blend-mode:soft-light;overflow:hidden;pointer-events:none}
 .hero-glow::before{content:"";position:absolute;top:-20%;bottom:-20%;left:-40%;width:80%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:heroGlow 9s ease-in-out infinite alternate}
 
