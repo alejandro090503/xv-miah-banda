@@ -120,7 +120,7 @@ export const TEXTS = {
     // Cierre
     closeMsg: "Este día ha vivido en mis sueños, y su verdadera magia será estar rodeada de quienes han caminado conmigo.",
     // Footer
-    footFecha: "XXXI · Enero · MMXXVII",
+    footFecha: "31 · Enero · 2027",
     footCredito: "Con mucho cariño por",
   },
   en: {
@@ -222,7 +222,7 @@ export const TEXTS = {
     rsvpYaSi: "You already confirmed your attendance! You can update your reply.",
     rsvpYaNo: "We have you down as unable to attend. You can change your reply.",
     closeMsg: "This day has lived in my dreams, and its true magic will be having beside me those who walked this path with me.",
-    footFecha: "XXXI · January · MMXXVII",
+    footFecha: "January · 31 · 2027",
     footCredito: "Made with love by",
   },
 };

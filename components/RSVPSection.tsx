@@ -14,7 +14,7 @@ import { useLang } from "./i18n";
    ══════════════════════════════════════════════════════════════ */
 
 const PANEL_API = "https://panel-invitados.vercel.app/api/confirmar";
-const RSVP_URL = "https://xv-miah-banda.vercel.app";
+const RSVP_URL = "https://sweet-16-miah-banda.vercel.app";
 const DEADLINE = new Date(2027, 0, 15, 23, 59, 59, 999);
 
 type Choice = "yes" | "no" | null;
