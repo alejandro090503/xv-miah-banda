@@ -15,7 +15,7 @@ import { useLang } from "./i18n";
 
 const PANEL_API = "https://panel-invitados.vercel.app/api/confirmar";
 const RSVP_URL = "https://sweet-16-miah-banda.vercel.app";
-const DEADLINE = new Date(2027, 0, 15, 23, 59, 59, 999);
+const DEADLINE = new Date(2027, 0, 1, 23, 59, 59, 999);
 
 type Choice = "yes" | "no" | null;
 type Estado = "confirmado" | "declino";
@@ -36,7 +36,7 @@ const DICT = {
     eyebrow: "Confirma tu asistencia",
     title: "Te espero",
     textoA: "Por favor confirma tu asistencia antes del ",
-    fecha: "15 de enero de 2027",
+    fecha: "1 de enero de 2027",
     textoB: ".",
     para: "Esta invitación es para",
     pases: "Pases",
@@ -75,15 +75,15 @@ const DICT = {
     errBorrada: "Esta invitación ya no está activa. Pide a la familia un enlace nuevo.",
     errSinLink: "Para confirmar, abre el enlace personal que te enviaron.",
     errDesconocido: "No encontramos tu invitación. Pide a la familia un enlace nuevo.",
-    frozen: "La fecha límite para confirmar (15 de enero de 2027) ya pasó. Las confirmaciones están cerradas.",
-    limite: "Fecha límite · 15 de enero de 2027",
+    frozen: "La fecha límite para confirmar (1 de enero de 2027) ya pasó. Las confirmaciones están cerradas.",
+    limite: "Fecha límite · 1 de enero de 2027",
     sinNinos: "Evento sin niños menores de 8 años",
   },
   en: {
     eyebrow: "RSVP",
     title: "Join me",
     textoA: "Please confirm your attendance by ",
-    fecha: "January 15, 2027",
+    fecha: "January 1, 2027",
     textoB: ".",
     para: "This invitation is for",
     pases: "Passes",
@@ -122,8 +122,8 @@ const DICT = {
     errBorrada: "This invitation is no longer active. Please ask the family for a new link.",
     errSinLink: "To RSVP, please open the personal link you received.",
     errDesconocido: "We couldn't find your invitation. Please ask the family for a new link.",
-    frozen: "The RSVP deadline (January 15, 2027) has passed. Replies are closed.",
-    limite: "Deadline · January 15, 2027",
+    frozen: "The RSVP deadline (January 1, 2027) has passed. Replies are closed.",
+    limite: "Deadline · January 1, 2027",
     sinNinos: "No children under 8",
   },
 };

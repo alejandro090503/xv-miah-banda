@@ -9,7 +9,7 @@ interface VenueProps {
   mapsUrl: string;
 }
 
-function VenueCard({ type, name, address, time }: VenueProps) {
+function VenueCard({ type, name, address, time, mapsUrl }: VenueProps) {
   const t = useT();
   return (
     <div className="lev glow-edge" style={{
@@ -48,7 +48,7 @@ function VenueCard({ type, name, address, time }: VenueProps) {
           fontWeight: 700, fontSize: 22, color: "var(--text)",
           letterSpacing: 0.5, lineHeight: 1.3, marginBottom: 8,
         }}>
-          {name}
+          {name || null}
         </div>
 
         <div style={{
@@ -71,7 +71,12 @@ function VenueCard({ type, name, address, time }: VenueProps) {
           background: "linear-gradient(90deg,transparent,#D9A3AA,transparent)", opacity: 0.55 }} />
       </div>
 
-      <div style={{ height: 8 }} />
+      <div style={{ textAlign: "center", padding: "0 22px 26px" }}>
+        <a href={mapsUrl} target="_blank" rel="noopener noreferrer"
+          style={{ display: "inline-block", marginTop: 8, padding: "14px 32px", background: "linear-gradient(135deg,#B76E79,#8C4F59)", color: "#fff", borderRadius: 30, fontFamily: "var(--font-lato), sans-serif", fontSize: 14, fontWeight: 800, textTransform: "uppercase", letterSpacing: 3, textDecoration: "none", boxShadow: "0 4px 16px rgba(110,53,64,0.3)" }}>
+          {t.ubiBtn}
+        </a>
+      </div>
     </div>
   );
 }
@@ -100,10 +105,10 @@ export default function Ubicacion() {
       <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
         <VenueCard
           type={t.ubiTipo}
-          name={t.porConfirmar}
-          address="La Puente, CA"
+          name=""
+          address="15904 Old Valley Blvd, La Puente, CA 91744"
           time="6:00 PM"
-          mapsUrl=""
+          mapsUrl="https://www.google.com/maps/search/?api=1&query=15904+Old+Valley+Blvd,+La+Puente,+CA+91744"
         />
       </div>
     </section>
