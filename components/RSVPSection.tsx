@@ -77,7 +77,7 @@ const DICT = {
     errDesconocido: "No encontramos tu invitación. Pide a la familia un enlace nuevo.",
     frozen: "La fecha límite para confirmar (15 de enero de 2027) ya pasó. Las confirmaciones están cerradas.",
     limite: "Fecha límite · 15 de enero de 2027",
-    sinNinos: "Evento sin niños menores de 10 años",
+    sinNinos: "Evento sin niños menores de 8 años",
   },
   en: {
     eyebrow: "RSVP",
@@ -124,7 +124,7 @@ const DICT = {
     errDesconocido: "We couldn't find your invitation. Please ask the family for a new link.",
     frozen: "The RSVP deadline (January 15, 2027) has passed. Replies are closed.",
     limite: "Deadline · January 15, 2027",
-    sinNinos: "No children under 10",
+    sinNinos: "No children under 8",
   },
 };
 
