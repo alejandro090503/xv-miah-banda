@@ -123,7 +123,7 @@ export default function Familia() {
               <circle cx="12" cy="7" r="4" />
             </svg>
           }
-          names={<>Luiz<Amp />Leea Banda</>}
+          names={<>Luiz Banda<Amp />Leea Banda</>}
         />
       </div>
     </section>
