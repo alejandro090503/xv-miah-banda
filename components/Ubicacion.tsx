@@ -3,7 +3,7 @@ import { useT } from "./i18n";
 
 interface VenueProps {
   type: string;
-  name: string;
+  name: React.ReactNode;
   address: string;
   time: string;
   mapsUrl: string;
@@ -105,9 +105,9 @@ export default function Ubicacion() {
       <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
         <VenueCard
           type={t.ubiTipo}
-          name=""
+          name={<>SGV Event Center<br />Bourbon Room</>}
           address="15904 Old Valley Blvd, La Puente, CA 91744"
-          time="6:00 PM"
+          time="5:00 PM"
           mapsUrl="https://www.google.com/maps/search/?api=1&query=15904+Old+Valley+Blvd,+La+Puente,+CA+91744"
         />
       </div>

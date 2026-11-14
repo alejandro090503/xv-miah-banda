@@ -7,8 +7,8 @@ const GCAL_URL = (() => {
   const details = encodeURIComponent(
     "Celebración de Sweet 16 de Miah Alana González · Coral Gables, FL."
   );
-  const location = encodeURIComponent("15904 Old Valley Blvd, La Puente, CA 91744");
-  const dates = "20270131T020000Z/20270131T080000Z";
+  const location = encodeURIComponent("SGV Event Center - Bourbon Room, 15904 Old Valley Blvd, La Puente, CA 91744");
+  const dates = "20270131T010000Z/20270131T080000Z";
   return `${base}&text=${title}&dates=${dates}&details=${details}&location=${location}`;
 })();
 
