@@ -50,11 +50,8 @@ export default function Hero() {
         <h1 className="foil-text foil-dark foil-d2" style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: "clamp(30px, 9.4vw, 40px)", letterSpacing: 7, textIndent: 7, textTransform: "uppercase", display: "inline-block", whiteSpace: "nowrap", filter: "drop-shadow(0 3px 12px rgba(0,0,0,.45))" }}>
           Miah Alana
         </h1>
-        <div style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 22, letterSpacing: 6, textTransform: "uppercase", textIndent: 6, marginTop: 14, color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>
+        <div style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 26, letterSpacing: 6, textTransform: "uppercase", textIndent: 6, marginTop: 16, color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>
           {t.fecha}
-        </div>
-        <div style={{ fontFamily: "var(--font-lato), sans-serif", fontWeight: 600, fontSize: 16, letterSpacing: 4, textTransform: "uppercase", marginTop: 8, color: "#F1D5D8", textShadow: "0 2px 10px rgba(0,0,0,.6)" }}>
-          La Puente, CA
         </div>
       </div>
       <div style={{ position: "absolute", bottom: 22, left: "50%", transform: "translateX(-50%)", animation: "hintFloat 3s ease-in-out infinite" }}>
