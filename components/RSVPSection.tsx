@@ -78,6 +78,7 @@ const DICT = {
     frozen: "La fecha límite para confirmar (1 de enero de 2027) ya pasó. Las confirmaciones están cerradas.",
     limite: "Fecha límite · 1 de enero de 2027",
     sinNinos: "Evento sin niños menores de 8 años",
+    contacto: "Dudas: Luiz Banda ·",
   },
   en: {
     eyebrow: "RSVP",
@@ -125,6 +126,7 @@ const DICT = {
     frozen: "The RSVP deadline (January 1, 2027) has passed. Replies are closed.",
     limite: "Deadline · January 1, 2027",
     sinNinos: "No children under 8",
+    contacto: "Questions: Luiz Banda ·",
   },
 };
 
@@ -705,6 +707,7 @@ export default function RSVPSection() {
             {t.limite}
           </p>
           <p className="rv-ninos">{t.sinNinos}</p>
+          <p className="rv-ninos rv-contacto">{t.contacto} <a href="tel:+16263183393" style={{ color: "inherit", fontWeight: 700, textDecoration: "none", whiteSpace: "nowrap" }}>626-318-3393</a></p>
         </div>
       </div>
     </section>
