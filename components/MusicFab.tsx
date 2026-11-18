@@ -1,7 +1,10 @@
 "use client";
 import { useState, useRef, useEffect, forwardRef, useImperativeHandle } from "react";
+import { useLang } from "./i18n";
 
-const AUDIO_URL = "https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/xv-miah-banda/cancion.mp3";
+const BASE = "https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/xv-miah-banda";
+const URL_EN = `${BASE}/cancion.mp3`;
+const URL_ES = `${BASE}/cancion-es.mp3`;
 
 export interface MusicFabHandle {
   play: () => void;
@@ -11,15 +14,29 @@ export interface MusicFabHandle {
 const MusicFab = forwardRef<MusicFabHandle>((_, ref) => {
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const lang = useLang();
+  const langRef = useRef(lang);
+  langRef.current = lang;
 
   useEffect(() => {
-    const a = new Audio(AUDIO_URL);
+    const a = new Audio(langRef.current === "en" ? URL_EN : URL_ES);
     a.loop = true;
     a.volume = 0.5;
     a.preload = "none";
     audioRef.current = a;
     return () => { a.pause(); };
   }, []);
+
+  // Cambia de canción (español / inglés) sin cortar la música si ya suena
+  useEffect(() => {
+    const a = audioRef.current;
+    if (!a) return;
+    const url = lang === "en" ? URL_EN : URL_ES;
+    if (a.src === url) return;
+    const was = !a.paused;
+    a.src = url;
+    if (was) a.play().catch(() => {});
+  }, [lang]);
 
   useImperativeHandle(ref, () => ({
     play() {
