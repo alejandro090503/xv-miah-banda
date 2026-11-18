@@ -22,6 +22,7 @@ export const TEXTS = {
       "Tú eres una de ellas.",
     ],
     xvAnios: "Sweet",
+    scrollHint: "Desliza hacia abajo",
     fecha: "30 · Enero · 2027",
     // Carrusel
     carTitle: "Miah Alana",
@@ -139,6 +140,7 @@ export const TEXTS = {
       "You are one of them.",
     ],
     xvAnios: "Sweet",
+    scrollHint: "Please scroll down",
     fecha: "January · 30 · 2027",
     carTitle: "Miah Alana",
     carHint: "Drag to spin",

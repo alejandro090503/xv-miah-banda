@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
       {/* velo solo en la franja baja */}
       <div aria-hidden style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "58%", zIndex: -2, background: "linear-gradient(to top, rgba(61,32,40,.88) 0%, rgba(61,32,40,.62) 45%, transparent 100%)", pointerEvents: "none" }} />
-      <div ref={txt} style={{ position: "relative", width: "100%", textAlign: "center", padding: "0 20px 110px", color: "#fff" }}>
+      <div ref={txt} style={{ position: "relative", width: "100%", textAlign: "center", padding: "0 20px 120px", color: "#fff" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, color: "#F1D5D8" }}>
           <span style={{ width: 54, height: 1, background: "linear-gradient(90deg,transparent,#F1D5D8)" }} />
           <span style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 21, letterSpacing: 10, textIndent: 10, textTransform: "uppercase", textShadow: "0 2px 10px rgba(0,0,0,.5)" }}>{t.xvAnios}</span>
@@ -54,8 +54,9 @@ export default function Hero() {
           {t.fecha}
         </div>
       </div>
-      <div style={{ position: "absolute", bottom: 22, left: "50%", transform: "translateX(-50%)", animation: "hintFloat 3s ease-in-out infinite" }}>
-        <div style={{ width: 1, height: 28, background: "linear-gradient(to bottom, transparent, rgba(255,255,255,.85))" }} />
+      <div style={{ position: "absolute", bottom: 18, left: "50%", transform: "translateX(-50%)", animation: "hintFloat 3s ease-in-out infinite" }}>
+        <div style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 15, letterSpacing: 4, textTransform: "uppercase", color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,.7)", textAlign: "center", whiteSpace: "nowrap", marginBottom: 6 }}>{t.scrollHint}</div>
+        <div style={{ width: 1, height: 28, margin: "0 auto", background: "linear-gradient(to bottom, transparent, rgba(255,255,255,.85))" }} />
       </div>
     </section>
   );
