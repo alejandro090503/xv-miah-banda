@@ -86,6 +86,8 @@ export const TEXTS = {
     albumTitulo: "Álbum de Fotos",
     albumTexto: "Escanea el código y comparte conmigo las fotos que tomes esa noche.",
     albumBtn: "Ir al álbum",
+    albumAviso: "El álbum de fotos se habilita el día del evento. Regresa aquí y sube todas tus fotos de la noche ✨",
+    albumHint: "Puedes subirlas hasta 7 días después del evento.",
     // Solo adultos
     adultosTitulo: "Sin niños menores de 8 años",
     adultosTexto: "Con todo cariño, te pedimos no llevar niños menores de 8 años a esta celebración.",
@@ -192,6 +194,8 @@ export const TEXTS = {
     albumTitulo: "Photo Album",
     albumTexto: "Scan the code and share with me the photos you take that night.",
     albumBtn: "Go to the album",
+    albumAviso: "The photo album opens on the day of the event. Come back here and upload all your photos from the night ✨",
+    albumHint: "You can upload them up to 7 days after the event.",
     adultosTitulo: "No children under 8",
     adultosTexto: "With all our love, we kindly ask that children under 8 not attend this celebration.",
     rsvpEyebrow: "Please Reply",
