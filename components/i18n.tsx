@@ -50,7 +50,7 @@ export const TEXTS = {
     itinEventos: [
       { time: "5:00 – 6:00 PM", name: "Hora de cóctel", desc: "" },
       { time: "6:00 – 8:00 PM", name: "Cena", desc: "" },
-      { time: "8:00 PM", name: "Bailes sorpresa", desc: "" },
+      { time: "8:00 PM", name: "Baile Sorpresa", desc: "" },
       { time: "8:30 PM", name: "Corte de pastel", desc: "" },
       { time: "9:00 PM – 12:00 AM", name: "Fiesta", desc: "" },
     ],
@@ -162,7 +162,7 @@ export const TEXTS = {
     itinEventos: [
       { time: "5:00 – 6:00 PM", name: "Cocktail Hour", desc: "" },
       { time: "6:00 – 8:00 PM", name: "Dinner", desc: "" },
-      { time: "8:00 PM", name: "Surprise Dances", desc: "" },
+      { time: "8:00 PM", name: "Surprise Dance", desc: "" },
       { time: "8:30 PM", name: "Cake Cutting", desc: "" },
       { time: "9:00 PM – 12:00 AM", name: "Party", desc: "" },
     ],
