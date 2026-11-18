@@ -54,8 +54,8 @@ export default function Hero() {
           {t.fecha}
         </div>
       </div>
-      <div style={{ position: "absolute", bottom: 18, left: "50%", transform: "translateX(-50%)", animation: "hintFloat 3s ease-in-out infinite" }}>
-        <div style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 15, letterSpacing: 4, textTransform: "uppercase", color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,.7)", textAlign: "center", whiteSpace: "nowrap", marginBottom: 6 }}>{t.scrollHint}</div>
+      <div style={{ position: "absolute", bottom: 18, left: 0, right: 0, animation: "hintFloat 3s ease-in-out infinite" }}>
+        <div style={{ fontFamily: "var(--font-cormorant), serif", fontWeight: 700, fontSize: 15, letterSpacing: 4, textTransform: "uppercase", color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,.7)", textAlign: "center", marginBottom: 6, padding: "0 12px" }}>{t.scrollHint}</div>
         <div style={{ width: 1, height: 28, margin: "0 auto", background: "linear-gradient(to bottom, transparent, rgba(255,255,255,.85))" }} />
       </div>
     </section>
